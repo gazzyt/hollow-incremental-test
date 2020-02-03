@@ -66,10 +66,10 @@ public class IncrementalProducer {
         
         producer.restore(consumer.getCurrentVersionId(), blobRetriever);        
 
-        Actor actor1 = new Actor(1, "Gary");
+        Actor actor1 = new Actor("one", "Gary");
         List<Actor> set1 = new ArrayList<>();
         set1.add(actor1);
-        Movie movie1 = new Movie(1, "Movie1v2", set1);
+        Movie movie1 = new Movie("one", "Movie1v2", set1);
         
         producer.runIncrementalCycle(incrementalWriteState -> {
         	incrementalWriteState.addOrModify(movie1);

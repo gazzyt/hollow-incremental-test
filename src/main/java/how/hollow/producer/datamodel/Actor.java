@@ -17,16 +17,19 @@
  */
 package how.hollow.producer.datamodel;
 
+import com.netflix.hollow.core.write.objectmapper.HollowInline;
 import com.netflix.hollow.core.write.objectmapper.HollowPrimaryKey;
 
 @HollowPrimaryKey(fields="actorId")
 public class Actor {
-    public int actorId;
+
+	@HollowInline
+    public String actorId;
     public String actorName;
 
     public Actor() { }
     
-    public Actor(int actorId, String actorName) {
+    public Actor(String actorId, String actorName) {
         this.actorId = actorId;
         this.actorName = actorName;
     }

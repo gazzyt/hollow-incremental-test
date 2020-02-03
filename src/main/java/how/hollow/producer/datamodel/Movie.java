@@ -18,6 +18,7 @@
 package how.hollow.producer.datamodel;
 
 import com.netflix.hollow.core.write.objectmapper.HollowHashKey;
+import com.netflix.hollow.core.write.objectmapper.HollowInline;
 import com.netflix.hollow.core.write.objectmapper.HollowPrimaryKey;
 
 import java.util.List;
@@ -26,14 +27,15 @@ import java.util.Set;
 @HollowPrimaryKey(fields="id")
 public class Movie {
 
-    public int id;
+	@HollowInline
+    public String id;
     public String title;
     //@HollowHashKey(fields="actorName")
     public List<Actor> actors;
     
     public Movie() { }
     
-    public Movie(int id, String title, List<Actor> actors) {
+    public Movie(String id, String title, List<Actor> actors) {
         this.id = id;
         this.title = title;
         this.actors = actors;

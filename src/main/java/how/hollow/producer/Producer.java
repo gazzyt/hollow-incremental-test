@@ -49,14 +49,14 @@ public class Producer {
         
         producer.initializeDataModel(Movie.class);
         
-        Actor actor1 = new Actor(1, "Gary");
+        Actor actor1 = new Actor("one", "Gary");
         List<Actor> set1 = new ArrayList<>();
         set1.add(actor1);
-        Actor actor2 = new Actor(1, "Gary");
+        Actor actor2 = new Actor("one", "Gary");
         List<Actor> set2 = new ArrayList<>();
         set2.add(actor2);
-        Movie movie1 = new Movie(1, "Movie1", set1);
-        Movie movie2 = new Movie(2, "Movie2", set2);
+        Movie movie1 = new Movie("one", "Movie1", set1);
+        Movie movie2 = new Movie("one", "Movie2", set2);
         
         producer.runCycle(writeState -> {
             writeState.add(movie1);
