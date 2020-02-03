@@ -49,10 +49,10 @@ public class Producer {
         
         producer.initializeDataModel(Movie.class);
         
-        Actor actor1 = new Actor("one", "Gary");
+        Actor actor1 = new Actor("one", "Gary", null);
         List<Actor> set1 = new ArrayList<>();
         set1.add(actor1);
-        Actor actor2 = new Actor("one", "Gary");
+        Actor actor2 = new Actor("one", "Gary", null);
         List<Actor> set2 = new ArrayList<>();
         set2.add(actor2);
         Movie movie1 = new Movie("one", "Movie1", set1);

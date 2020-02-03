@@ -17,6 +17,8 @@
  */
 package how.hollow.producer.datamodel;
 
+import java.util.List;
+
 import com.netflix.hollow.core.write.objectmapper.HollowInline;
 import com.netflix.hollow.core.write.objectmapper.HollowPrimaryKey;
 
@@ -26,12 +28,14 @@ public class Actor {
 	@HollowInline
     public String actorId;
     public String actorName;
+    public List<String> tags;
 
     public Actor() { }
     
-    public Actor(String actorId, String actorName) {
+    public Actor(String actorId, String actorName, List<String> tags) {
         this.actorId = actorId;
         this.actorName = actorName;
+        this.tags = tags;
     }
     
 }

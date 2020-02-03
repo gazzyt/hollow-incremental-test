@@ -66,7 +66,7 @@ public class IncrementalProducer {
         
         producer.restore(consumer.getCurrentVersionId(), blobRetriever);        
 
-        Actor actor1 = new Actor("one", "Gary");
+        Actor actor1 = new Actor("one", "Gary", new ArrayList<>());
         List<Actor> set1 = new ArrayList<>();
         set1.add(actor1);
         Movie movie1 = new Movie("one", "Movie1v2", set1);
