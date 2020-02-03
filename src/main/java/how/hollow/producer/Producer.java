@@ -27,7 +27,9 @@ import how.hollow.producer.datamodel.Actor;
 import how.hollow.producer.datamodel.Movie;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 
@@ -48,10 +50,10 @@ public class Producer {
         producer.initializeDataModel(Movie.class);
         
         Actor actor1 = new Actor(1, "Gary");
-        Set<Actor> set1 = new HashSet<>();
+        List<Actor> set1 = new ArrayList<>();
         set1.add(actor1);
         Actor actor2 = new Actor(1, "Gary");
-        Set<Actor> set2 = new HashSet<>();
+        List<Actor> set2 = new ArrayList<>();
         set2.add(actor2);
         Movie movie1 = new Movie(1, "Movie1", set1);
         Movie movie2 = new Movie(2, "Movie2", set2);

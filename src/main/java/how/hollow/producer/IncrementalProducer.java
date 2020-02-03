@@ -32,7 +32,9 @@ import how.hollow.producer.datamodel.Movie;
 
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 
@@ -65,7 +67,7 @@ public class IncrementalProducer {
         producer.restore(consumer.getCurrentVersionId(), blobRetriever);        
 
         Actor actor1 = new Actor(1, "Gary");
-        Set<Actor> set1 = new HashSet<>();
+        List<Actor> set1 = new ArrayList<>();
         set1.add(actor1);
         Movie movie1 = new Movie(1, "Movie1v2", set1);
         
